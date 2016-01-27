@@ -3,8 +3,8 @@ body {
 	overflow: auto;
 }
 iframe {
-	min-width: 250;
-	min-height: 100;
+	min-width: 350px;
+	min-height: 350px;
 	border: 1px solid #FF9966;
 	overflow: auto;
 	margin: 10px;

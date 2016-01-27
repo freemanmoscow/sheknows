@@ -20,16 +20,19 @@ sheknows = (function() {
 		var topLocationHostname = "",
 			placement = placement?parseInt(placement):false;
 		try {
-			topLocationHostname = window.top.location.hostname;
+			topLocationHostname = document.referrer;
+			var parser = document.createElement('a');
+			parser.href = topLocationHostname;
+			topLocationHostname = parser.hostname;
 		}
 		catch (e) {
 			console.error("Error:", e.message);
 		}
 		data.title = document.title;
 		data.frame = window.self !== window.top;
-		data.hostname = data.frame?window.location.hostname + ',' + topLocationHostname:window.location.hostname;
+		data.hostname = data.frame?topLocationHostname + ',' + window.location.hostname:window.location.hostname;
 		data.order = placement || ++placementInit || 0;
-		return data;
+		return data
 	}
 	/*
 	 * Method: Sends data to web service
