@@ -13,5 +13,4 @@ window.onload = function() {
 	newElement.innerHTML = window.self !== window.top?"This is a frame":"This is not a frame";
 	newElement.style.color = "#FF9966";
 	parentNode.insertBefore(newElement, parentNode.firstChild);
-	autoResize("frame1");
 }
