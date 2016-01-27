@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Page With Frames</title>
+		<link rel="stylesheet" type="text/css" href="../css/sheknows.min.css">
+		<script type="text/javascript" src="../js/global.min.js" ></script>
+	</head>
+	<body>
+		<script>
+			(function(e,n,s,t,o,u,a){e[o]=e[o]||function(){(e[o].queue=e[o].queue||[]).push(arguments)},u=n.createElement(s),a=n.getElementsByTagName(s)[0],u.async=1,u.src=t,a.parentNode.insertBefore(u,a)})(window,document,"script","../js/sheknows.min.js","sheknows")
+		</script>
+		<div class="ad-space">
+			Ad space 1
+			<script>
+				/*
+				 * Tracking request without inventory number will be autoincremented
+				 */
+				sheknows('setSendData');
+			</script>
+		</div>
+		<iframe id="frame1" src="index-noframes.html">
+		</iframe>
+		<div class="ad-space">
+			Ad space 2
+			<script>
+				/*
+				 * Tracking request without inventory number will be autoincremented
+				 */
+				sheknows('setSendData');
+			</script>
+		</div>
+		<div class="ad-space">
+			Ad space 3. Sequence hardcoded to inventory #1001. Update delayed by 2s.
+			<script>
+				/*
+				 * Tracking request with timeout will most probably not go into the queue and will be executed immediately.
+				 * (depends on connection speed)
+				 * Inventory number will be used
+				 */
+				setTimeout(function(){sheknows('setSendData',1001);},2000);
+			</script>
+		</div>
+	</body>
+</html>

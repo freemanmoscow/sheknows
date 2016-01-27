@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Page 2 - No Frames</title>
+		<link rel="stylesheet" type="text/css" href="../css/sheknows.css">
+		<script type="text/javascript" src="../js/global.js" ></script>
+	</head>
+	<body>
+		<h2>Page 2 - No Frames</h2>
+		<script>
+			/*
+			 * Loads tracking script and creates a queue for tracking requests before the script is loaded.
+			 * This script only needs to be exeuted once but is fool proof in case it's executed multiple times.
+			 */
+			(function(scope,documentBase,snippetType,url,baseObject,element,node){
+				scope[baseObject]=scope[baseObject]||function(){
+					(scope[baseObject].queue=scope[baseObject].queue||[]).push(arguments)
+				},
+				element=documentBase.createElement(snippetType),
+				node=documentBase.getElementsByTagName(snippetType)[0];
+				element.async=1;
+				element.src=url;
+				node.parentNode.insertBefore(element,node)
+			})(window,document,'script','../js/sheknows.js','sheknows');
+		</script>
+		<div class="ad-space">
+			Page 2. Ad space 1
+			<script>
+				/*
+				 * Tracking request without inventory number will be autoincremented
+				 */
+				sheknows('setSendData');
+			</script>
+		</div>
+		<div class="ad-space">
+			Page 2. Ad space 2
+			<script>
+				/*
+				 * Tracking request without inventory number will be autoincremented
+				 */
+				sheknows('setSendData');
+			</script>
+		</div>
+	</body>
+</html>
