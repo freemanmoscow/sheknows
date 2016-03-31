@@ -1,10 +1,10 @@
 # Project Name
 
-sheknows.com tracking snippet
+Tracking snippet that can be installed on tany website and send data using web service
 
 # Project Description
 
-This is a coding challenge for sheknows.com
+This is a coding was designed for one of my friends to track basic data on both browser and server side.
 
 # Project Overview
 
@@ -24,15 +24,15 @@ Every time the tag is invoked on the page, capture the following data:
 
 Send this data back to a server and record in a SQL database (mysql or sqlite).
 
-# Bonus Assignment
+# Bonus
 
-If time permits, when you detect that you are within a frame, also save the hostname of the parent document via a comma-separated list. In this case, the hostname might look like this: “www.sheknows.com, www.parentpage.com”
+When you detect that you are within a frame, also save the hostname of the parent document via a comma-separated list.
 
 ## Installation
 
-This project will be preinstalled on http://techolution.mobi/pavel
-To install it anywhere else - just copy and paste the entire folder structure in www root folder.
+To install it anywhere - just copy and paste the entire folder structure in www root folder.
 Make sure you change file paths for js, css, html and php where needed to correspond to your folder structire.
+Also, php web service is for backend demo purposes only. Make sure you address security issues. Web service doesn't contain any filtering and protection from SQL injection!
 
 ## Usage
 
@@ -59,4 +59,3 @@ inventoryData should be an integer representing inventory number of this trackin
 ## Credits
 
 Created on Jan 26, 2016 by Pavel Usmanov.
-Server with LAMP environment is provided by Techolution.mobi
